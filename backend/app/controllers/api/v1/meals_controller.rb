@@ -28,7 +28,7 @@ class Api::V1::MealsController < ApplicationController
 
     respond_to do |format|
       if @meal.save
-        format.html { redirect_to @meal, notice: 'List was successfully created.' }
+        format.html { redirect_to @meal, notice: 'Meal was successfully created.' }
         format.json { render :show, status: :created, location: @meal }
       else
         format.html { render :new }
@@ -56,7 +56,7 @@ class Api::V1::MealsController < ApplicationController
   private
 
   def meal_params
-    params.permit(:name, :rank)
+    params.require(:meal).permit(:name, :rank)
   end
 
   def find_meal
