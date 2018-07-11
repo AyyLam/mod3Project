@@ -1,28 +1,21 @@
+
+
+
 body {
-  font-family: Verdana;
+text-align: center;
+background: #193549;
+color: white;
+font-family: 'helvetica neue', sans-serif;
+font-weight: 100;
+font-size: 30px;
 }
 
-#sidebar {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 260px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    color: #fff;
-    background-color: #111; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 12px;
+.add-items {
+  margin-top: 20px;
 }
 
-#main, h1 {
-    margin-left: 310px; /* Same as the width of the sidebar */
-    padding: 20px 10px;
-}
-
-#main {
-  border-bottom: 1px solid black;
+.add-items input {
+  padding:10px;
+  outline:0;
+  border:1px solid rgba(0,0,0,0.1);
 }
