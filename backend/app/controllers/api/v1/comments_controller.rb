@@ -1,5 +1,5 @@
 class Api::V1::CommentsController < ApplicationController
-  efore_action :find_comment, only: [:show, :edit, :update]
+  before_action :find_comment, only: [:show, :edit, :update, :destroy]
 
   #GET /comments
   #GET /comments.json
@@ -10,10 +10,10 @@ class Api::V1::CommentsController < ApplicationController
 
   #GET /comments/1
   #GET /comments/1.json
-  # def show
-  #   # comment = Comment.find_comment
-  #   # render json: @comment
-  # end
+  def show
+    # comment = Comment.find_comment
+    render json: @comment
+  end
 
   # GET/comments/new
   def new
@@ -51,6 +51,14 @@ class Api::V1::CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment.destroy
+      respond_to do |format|
+      format.html { redirect_to lists_url, notice: 'Comment was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
 
 
   private
@@ -62,6 +70,4 @@ class Api::V1::CommentsController < ApplicationController
   def find_comment
     @comment = Comment.find(params[:id])
   end
-end
-
 end

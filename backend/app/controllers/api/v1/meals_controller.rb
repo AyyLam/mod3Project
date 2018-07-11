@@ -11,8 +11,7 @@ class Api::V1::MealsController < ApplicationController
   #GET /meals/1
   #GET /meals/1.json
   def show
-    # meal = Meal.find_meal
-    # render json: @meal
+    render json: @meal
   end
 
   # GET/meals/new
