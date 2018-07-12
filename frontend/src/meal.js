@@ -1,3 +1,6 @@
+const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+
 class Meal {
    constructor(meal) {
      this.name = meal.name
@@ -46,8 +49,11 @@ class Meal {
       const placement = document.querySelector('#food-form')
       placement.innerHTML =
       `<div id="searchbar">
-        <label for="Search">Search Meals</label>
-        <input id="meal-search" type="text" name="meal-search" required>
+        <form class="search-form">
+          <input type="text" class="search" placeholder="Type Keywords">
+          <ul class="suggestions">
+          </ul>
+        </form>
       </div>`
     }
 
