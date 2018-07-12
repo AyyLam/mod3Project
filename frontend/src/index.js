@@ -18,6 +18,23 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('scroll', fixNav);
   ////////////
 
-  
+  ///////////
+  /// PROMPT ADD MEAL STATE
+  const addButton = document.getElementById('add-meal-button')
+  addButton.addEventListener('click', ()=> {
+    console.log('CHANGE TO MEAL FORM')
+    Meal.renderMealForm()
+
+  })
+
+  const searchButton = document.getElementById('search-meal-button')
+  searchButton.addEventListener('click', ()=>{
+    console.log('CHANGE TO SEARCH BAR')
+    Meal.renderSearchBar() 
+
+  })
+
+
+
 
 });
